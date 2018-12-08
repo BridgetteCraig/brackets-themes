@@ -1,0 +1,22 @@
+{
+    "name": "peachy-theme",
+    "title": "peachy-theme",
+    "description": "Brackets version of the firewatch-syntax Atom theme.",
+    "homepage": "https://github.com/BridgetteCraig/brackets-themes/peachy-theme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BridgetteCraig/brackets-themes/tree/master/peachy-theme"
+    },
+    "version": "1.0.0",
+    "author": "Bridgette Craig (https://github.com/BridgetteCraig)",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.42.0"
+    },
+    "theme": {
+        "file": "theme.less",
+        "dark": true,
+        "addModeClass": true
+    },
+    "keywords": ["theme"]
+}
