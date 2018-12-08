@@ -1,0 +1,161 @@
+/* Define some variables used in multiple places */
+@background: darken((hsl(220, 14%, 71%)), 26%);
+@foreground: hsl(220, 13%, 18%);
+
+// Config -----------------------------------
+@syntax-hue:          220;
+@syntax-saturation:   13%;
+@syntax-brightness:   18%;
+
+// Monochrome -----------------------------------
+@mono-1: hsl(220, 14%, 71%); // default text
+@mono-2: hsl(220,  9%, 55%); 
+@mono-3: hsl(220, 10%, 40%); //comment
+
+// Colors --------------------------------------------
+@hue-cyan:   hsl(187, 47%, 55%); // cyan
+@hue-purple:   hsl(240, 99%, 96%); // pale purple
+@hue-dark-orange:   hsl(20, 72%, 52%); // dark orange
+@hue-cream:   hsl(24, 28%, 70%); // cream
+@hue-pink:   hsl(355, 65%, 65%); // pink red
+@hue-red: hsl(  5, 48%, 51%); // red
+@hue-light-orange:   hsl( 29, 54%, 61%); // light orange
+@hue-yellow: hsl( 39, 67%, 69%); // pale yellow
+
+// Base colors -----------------------------------
+@syntax-fg:     hsl(220, 14%, 71%);
+@syntax-bg:     hsl(220, 13%, 18%); // background color
+@syntax-gutter: darken((hsl(220, 14%, 71%)), 26%);
+@syntax-guide:  fade((hsl(220, 14%, 71%)), 15%);
+@syntax-accent: hsl(220, 100%, 66%);
+
+// General colors -------------------------------
+@syntax-text-color:            hsl(220, 14%, 71%);
+@syntax-cursor-color:          hsl(220, 100%, 66%);
+@syntax-selection-color:       lighten((hsl(220, 13%, 18%)), 10%);
+@syntax-selection-flash-color: hsl(220, 100%, 66%);
+@syntax-background-color:      hsl(220, 13%, 18%);
+
+// Gutter colors --------------------------------
+@syntax-gutter-text-color:  darken((hsl(220, 14%, 71%)), 26%);
+@syntax-gutter-text-color-selected: hsl(220, 14%, 71%);
+@syntax-gutter-background-color:    hsl(220, 13%, 18%); // unused
+@syntax-gutter-background-color-selected: lighten((hsl(220, 13%, 18%)), 2%);
+
+@syntax-cursor-line: hsla(220, 100%,  80%, .04); // needs to be semi-transparent to show serach results
+
+/* SWATCHES ---------------------------------------------------------------------- */
+
+/* bright yellow */
+span.cm-atom		{ color: @hue-cream; }   /*  */
+span.cm-link		{ color: @hue-dark-orange; }   /* links */
+span.cm-string		{ color: @hue-cream; }   /* strings, inside quotations */
+
+/* pale pinkish-orange */
+span.cm-attribute	{ color: @hue-light-orange; }   /*  */
+span.cm-bracket		{ color: @mono-1; }   /*  */
+span.cm-builtin     { color: @mono-1; }   /*  */
+span.cm-meta		{ color: @hue-light-orange; }   /*  */
+span.cm-qualifier	{ color: @mono-1; }   /*  */
+span.cm-constant	{ color: @hue-light-orange; }   /*  */
+span.cm-body    	{ color: @mono-1; }   /*  */
+
+/* pale orange */
+span.cm-property	{ color: @hue-pink; }   /*  */
+span.cm-tag			{ color: @hue-pink; }   /*  */
+span.cm-selector	{ color: @hue-pink; }   /*  */
+
+/* dark grey-blue and hot pink */
+span.cm-comment		{ color: @mono-3; }   /*  */
+span.cm-error		{ color: @hue-red; }   /*  */
+
+/* white */
+span.cm-keyword		{ color: @hue-dark-orange; }   /*  */
+span.cm-operator	{ color: @hue-dark-orange; }   /* if, else, etc */
+
+/* lavender */
+span.cm-string-2    { color: @hue-cream; }   /*  */
+span.cm-variable-2	{ color: @hue-pink; }   /*  */
+span.cm-variable-3	{ color: @hue-pink; }   /*  */
+
+/* dark pinkish-orange */
+span.cm-def			{ color: #ffffff; }   /* function definitions */
+span.cm-header      { color: @hue-light-orange; }   /*  */
+span.cm-variable	{ color: @hue-pink; }   /*  */
+
+span.cm-number		{ color: #ffffff; }   /*  */
+
+
+/* MISC ---------------------------------------------------------------------- */
+
+.CodeMirror,
+.CodeMirror .CodeMirror-scroll {
+	background: #020219;
+	color: #d9d9d9;
+}
+
+.CodeMirror-cursor {
+	border-left: 1px solid #fff !important;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-bottom: 1px solid #fff !important;
+    border-left: none !important;
+}
+
+
+.CodeMirror-gutters {
+	background: #020219;
+	border-right: 1px solid #313134;
+}
+
+.CodeMirror-linenumber {
+	color: #45484d;
+}
+
+.CodeMirror-selected {
+	background: #1c5393 !important;
+}
+
+/* Matching */
+
+.CodeMirror-matchingbracket {
+    background: transparent !important;
+	border-bottom: 3px solid #fff !important;
+    color: #d9d9d9 !important;
+}
+
+.CodeMirror-matchingtag {
+    background: transparent !important;
+	border-bottom: 1px solid #fff !important;
+}
+
+/* Active Line */
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-nonmatchingbracket {
+	color: #ff3867 !important;
+}
+
+.CodeMirror-activeline-background {
+	background: #25252c !important;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+	color: #fff;
+	background-color: #25252c !important;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .inline-widget .CodeMirror-gutter-elt {
+	color: #fff;
+}
+
+/* Non-editor styling */
+
+#image-holder,
+#not-editor {
+    background-color: #020219;
+}
+
+#image-holder {
+    color: #d9d9d9;
+}
