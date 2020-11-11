@@ -1,0 +1,22 @@
+{
+    "name": "dashing-dark",
+    "title": "dashing-dark",
+    "description": "Brackets version of the firewatch-syntax Atom theme.",
+    "homepage": "https://github.com/samantha-craig/brackets-themes/dashing-dark",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/samantha-craig/brackets-themes/tree/master/dashing-dark"
+    },
+    "version": "1.0.0",
+    "author": "Samantha Craig (https://github.com/samantha-craig)",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.42.0"
+    },
+    "theme": {
+        "file": "dashing-dark.less",
+        "dark": true,
+        "addModeClass": true
+    },
+    "keywords": ["theme"]
+}
